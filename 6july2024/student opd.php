@@ -6,20 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-
 <?php
 if(isset($_REQUEST['submit'])){
     $stid = $_REQUEST['stid'];
-$datas = file('result.txt');
+//$datas = file('result.txt');
 //echo "<pre>";
 //print_r($data);
-foreach($datas as $data){
-    $line = explode("|", $data);
-    list($id,$name,$score,$result) = $line;
-    if($id == $stid){
-        echo $id,$name,$score,$result;
+function show_result($stid){
+    $datas = file('result.txt');
+    foreach($datas as $data){
+        $line = explode("|", $data);
+        list($id,$name,$score,$result) = $line;
+        if($id == $stid){
+            echo $id,$name,$score,$result;
+        }
     }
-}
+    }
+    
 }
 
 
