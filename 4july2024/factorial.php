@@ -18,7 +18,7 @@ function factCheck($number){
     for($i=$number; $i>1; $i--){
         $fact = $fact * $i;
     }
-    return "the factorial of " . $number . is
+    return "the factorial of " . $number . "is";
 
 }
 
