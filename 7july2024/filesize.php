@@ -3,4 +3,5 @@
  //echo filesize($path);
  $path =  'files/book.pdf';
  echo filesize($path);
+ 
 ?>
