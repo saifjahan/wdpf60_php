@@ -19,7 +19,7 @@
     }
     function primecheck($num){
         if($num==0){
-            return "is not a allowed";
+            return $num ."is not a allowed";
         }
         if($num==1){
             return $num . "is not a prime number";
