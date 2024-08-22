@@ -23,11 +23,11 @@
         $sql = "INSERT INTO product (id, product_name, product_datails, product_price	, product_quantity, product_categories) VALUES ( NULL,'$product','$details','$price','$quantity',$categories)"; 
     
 
- $result =   $db->query($sql);
-if($db->affected_rows){
-    echo "successfully added";
-}else{
+ $result = $db->query($sql);
+if($db->error){
     echo "failed";
+}else{
+    echo "success";
 }
 
 
