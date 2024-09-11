@@ -20,8 +20,8 @@ if($usertype==1){
     } 
 }
 if($usertype==2){
-    $sql = $db->query("SELECT * FROM doctor WHERE email='$email' AND password='$password'");
-    if($sql->num_rows){
+    $sql2 = $db->query("SELECT * FROM doctors WHERE docEmail='$email' AND password='$password'");
+    if($sql2->num_rows){
         // session
         $_SESSION['email'] = $email;
         $_SESSION['utype'] = $usertype;
@@ -29,6 +29,17 @@ if($usertype==2){
         // Redirect
     } 
 
+}
+if($usertype==3){
+    $sql3 = $db->query("SELECT * FROM users WHERE email='$email' AND password='$password'");
+    if($sql3->num_rows){
+        // session
+        $_SESSION['email'] = $email;
+        $_SESSION['utype'] = $usertype;
+
+        // Redirect
+        header("location:patient_dashbord.php");
+    } 
 }
 
 ?>
